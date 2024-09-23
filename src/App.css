@@ -5,3 +5,149 @@
   text-align: center;
 }
 
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+
+
+/* for database */
+:root {
+  --btn: #dbdbdb;
+  --btn-hover: #cacaca;
+  --item-bg: #f0f0f0;
+  --modal-bg: rgba(141, 141, 141, 0.541);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--btn);
+  cursor: pointer;
+}
+
+.header > button:hover {
+  background-color: var(--btn-hover);
+}
+
+.employees {
+  display: flex;
+}
+
+.employees__names {
+  width: 30%;
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 450px;
+  padding: 10px;
+}
+
+.employees__single {
+  width: 70%;
+  border: 1px solid black;
+  height: 450px;
+  padding: 10px;
+}
+
+.employees__names--list {
+  display: flex;
+  flex-direction: column;
+}
+
+.employees__names--item {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: var(--item-bg);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected {
+  background-color: var(--btn);
+}
+
+.addEmployee {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-bg);
+  top: 0;
+  left: 0;
+}
+
+.addEmployee_create {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 50px grey;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addEmployee_create input {
+  padding: 10px;
+}
+
+.employees__single--info img {
+  width: 200px;
+  border-radius: 50%;
+}
