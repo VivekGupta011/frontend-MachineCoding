@@ -151,3 +151,82 @@ body {
   width: 200px;
   border-radius: 50%;
 }
+
+
+
+/* for cddPractise here we see instant flex and grid */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+} */
+
+
+.container{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items:center;
+  height: 40vh;
+  background-color: rgb(149, 134, 134);
+}
+
+
+.flex-item{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding: 20px;
+  background-color: blueviolet;
+}
+.grid-container-input{
+  display: grid;
+  max-width: 500px;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  padding: 20px;
+  background-color: burlywood;
+}
+
+.grid-item{
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.style-input{
+  width: 100%;
+  border: 2px solid black;
+}
+
+.faq-contaienr{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}

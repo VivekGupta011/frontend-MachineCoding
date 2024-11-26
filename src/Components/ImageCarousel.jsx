@@ -11,7 +11,6 @@ const ImageCarousel = () => {
 
   // Auto-play: Change image every 3 seconds
   useEffect(() => {
-    console.log("hello")
     const interval = setInterval(() => {
       goToNextSlide();
     }, 3000);
@@ -52,22 +51,12 @@ const ImageCarousel = () => {
 
       {/* Dots for navigation */}
       <div className="carousel-dots">
-        {images.map((image, index) => (
-          <img
+        {images.map((_, index) => (
+          <div
             key={index}
-            src={image}
-            alt={`Dot ${index}`}
             className={`dot ${currentIndex === index ? "active" : ""}`}
             onClick={() => setCurrentIndex(index)}
-            style={{
-              cursor: 'pointer',
-              width: '30px', // Set desired width for the dot images
-              height: '30px', // Set desired height for the dot images
-              borderRadius: '50%', // Optional: make them circular
-              margin: '0 5px',
-              opacity: currentIndex === index ? 1 : 0.5, // Highlight the active dot
-            }}
-          />
+          ></div>
         ))}
       </div>
 
@@ -103,6 +92,27 @@ const ImageCarousel = () => {
         }
         .right-arrow {
           right: 10px;
+        }
+        .carousel-dots {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .dot {
+          width: 15px;
+          height: 15px;
+          background-color: #ccc;
+          border-radius: 50%;
+          margin: 0 5px;
+          cursor: pointer;
+          // transition: background-color 0.3s, opacity 0.3s;
+        }
+        .dot.active {
+          background-color: #333;
+          opacity: 1;
+        }
+        .dot:hover {
+          opacity: 0.8;
         }
       `}</style>
     </div>

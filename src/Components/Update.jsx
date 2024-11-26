@@ -27,7 +27,12 @@ const Update = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!student.FirstName.trim() || !student.LastName.trim() || !student.RoleNo || !student.Marks) {
+    if (
+      !student.FirstName.trim() ||
+      !student.LastName.trim() ||
+      !student.RoleNo ||
+      !student.Marks
+    ) {
       alert("Please fill in all the fields with valid data.");
       return;
     }
@@ -56,8 +61,11 @@ const Update = () => {
   return (
     <div className="max-w-2xl mx-auto p-8">
       <h2 className="text-2xl font-semibold mb-6">Student List Data</h2>
-      
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 mb-10">
+
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-lg p-6 mb-10"
+      >
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-gray-700">First Name:</label>
@@ -107,7 +115,10 @@ const Update = () => {
       <h2 className="text-xl font-semibold mb-4">Student List:</h2>
       {studentList.length > 0 ? (
         studentList.map((item, index) => (
-          <div key={index} className="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between">
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between"
+          >
             {index === editIndex ? (
               <form className="w-full" onSubmit={handleSaveData}>
                 <div className="grid grid-cols-4 gap-4">
@@ -117,7 +128,9 @@ const Update = () => {
                       type="text"
                       className="w-full border border-gray-300 p-2 rounded-md"
                       value={editStudent.FirstName}
-                      onChange={(event) => handleEditInputChange("FirstName", event)}
+                      onChange={(event) =>
+                        handleEditInputChange("FirstName", event)
+                      }
                     />
                   </div>
                   <div>
@@ -126,7 +139,9 @@ const Update = () => {
                       type="text"
                       className="w-full border border-gray-300 p-2 rounded-md"
                       value={editStudent.LastName}
-                      onChange={(event) => handleEditInputChange("LastName", event)}
+                      onChange={(event) =>
+                        handleEditInputChange("LastName", event)
+                      }
                     />
                   </div>
                   <div>
@@ -135,7 +150,9 @@ const Update = () => {
                       type="text"
                       className="w-full border border-gray-300 p-2 rounded-md"
                       value={editStudent.RoleNo}
-                      onChange={(event) => handleEditInputChange("RoleNo", event)}
+                      onChange={(event) =>
+                        handleEditInputChange("RoleNo", event)
+                      }
                     />
                   </div>
                   <div>
@@ -144,7 +161,9 @@ const Update = () => {
                       type="text"
                       className="w-full border border-gray-300 p-2 rounded-md"
                       value={editStudent.Marks}
-                      onChange={(event) => handleEditInputChange("Marks", event)}
+                      onChange={(event) =>
+                        handleEditInputChange("Marks", event)
+                      }
                     />
                   </div>
                 </div>
