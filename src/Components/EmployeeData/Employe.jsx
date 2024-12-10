@@ -129,9 +129,11 @@ const EmployeeApp = () => {
   const [selectedEmployeeId, setSelectedEmployeeId] = useState(
     employees[0]?.id || null
   );
+
   const [selectedEmployee, setSelectedEmployee] = useState(
     employees[0] || null
   );
+  
   const [showModal, setShowModal] = useState(false);
   const [newEmployee, setNewEmployee] = useState({
     firstName: "",
@@ -146,7 +148,14 @@ const EmployeeApp = () => {
   useEffect(() => {
     const emp = employees.find((emp) => emp.id === selectedEmployeeId);
     setSelectedEmployee(emp || null);
+
   }, [selectedEmployeeId, employees]);
+
+  useEffect(()=>{
+    if(selectedEmployee==null && employees.length>0){
+      setSelectedEmployee(employees[0])
+    }
+  },[selectedEmployee])
 
   const handleAddEmployee = (e) => {
     e.preventDefault();
