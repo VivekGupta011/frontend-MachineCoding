@@ -7,6 +7,8 @@ import EmployeeApp from "./Components/EmployeeData/Employe";
 import Faq from "./Components/Faq";
 import Faqs from "./Components/Faqs";
 import CenteredForm from "./Components/formValidation/Form";
+import GridLights from "./Components/gridLights/gridLights";
+import GridLightsGame from "./Components/gridLights/gridLightsOptimizedLevelUp";
 import ImageCarousel from "./Components/ImageCarousel";
 import Inputfied from "./Components/Inputfied";
 import MultiStepForm from "./Components/MultiStepForm";
@@ -61,7 +63,9 @@ function App() {
       {/* <HocFunc/> */}
       {/* <Calculator/> */}
       {/* <Dropdown/> */}
-      <CenteredForm/>
+      {/* <CenteredForm/> */}
+      {/* <GridLights/> */}
+      <GridLightsGame/>
 
       {/* <ReactTabUsingComposition/>  solve any error*/} 
 
