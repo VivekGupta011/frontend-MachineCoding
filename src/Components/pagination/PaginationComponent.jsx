@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const PaginationComponent = () => {
   // Dummy data: an array of objects
@@ -57,6 +58,12 @@ const PaginationComponent = () => {
     setCurrentPage(totalPages - 1);
     updateActiveData(totalPages - 1);
   };
+
+
+  useEffect(()=>{
+    updateActiveData(0);
+  },[pageSize])
+  
 
   return (
     <div style={{ maxWidth: "600px", margin: "20px auto", textAlign: "center" }}>

@@ -34,7 +34,7 @@ function App() {
       {/* <ImageCarousel/> */}
       {/* <MultiStepForm/> */}
       {/* <ShoppingListApp/> */}
-      {/* <CrudApp/> */}
+      <CrudApp/>
       {/* <SnakeGame/> */}
       {/* <TwoFactorCodeInput/> */}
       {/* <ThemeToggle/> */}
@@ -71,7 +71,7 @@ function App() {
 
       {/* <ReactTabUsingComposition/>  solve any error*/} 
       {/* <PaginationBasic/> */}
-      <PaginationComponent/>
+      {/* <PaginationComponent/> */}
 
     </>
   );
