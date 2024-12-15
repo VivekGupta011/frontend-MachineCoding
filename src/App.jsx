@@ -12,6 +12,8 @@ import GridLightsGame from "./Components/gridLights/gridLightsOptimizedLevelUp";
 import ImageCarousel from "./Components/ImageCarousel";
 import Inputfied from "./Components/Inputfied";
 import MultiStepForm from "./Components/MultiStepForm";
+import PaginationBasic from "./Components/pagination/PaginationBasic";
+import PaginationComponent from "./Components/pagination/PaginationComponent";
 import CounterCustomHooks from "./Components/ReactDesignPattern/CounterCustomHooks";
 import HocFunc from "./Components/ReactDesignPattern/HOC/HocFunc";
 import ReactHooks from "./Components/ReactDesignPattern/ReactHooks(CustomHooks)";
@@ -65,9 +67,11 @@ function App() {
       {/* <Dropdown/> */}
       {/* <CenteredForm/> */}
       {/* <GridLights/> */}
-      <GridLightsGame/>
+      {/* <GridLightsGame/> */}
 
       {/* <ReactTabUsingComposition/>  solve any error*/} 
+      {/* <PaginationBasic/> */}
+      <PaginationComponent/>
 
     </>
   );
